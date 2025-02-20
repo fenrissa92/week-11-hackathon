@@ -1,0 +1,19 @@
+.section {
+    background: var(--card-color);
+    color: var(--background-color);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .section:hover {
+    background: var(--accent-color);
+  }
+  
+  .content {
+    margin-top: 10px;
+    display: block;
+  }
+  

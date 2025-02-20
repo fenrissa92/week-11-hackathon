@@ -1,0 +1,36 @@
+:root {
+  --background-color: #31112c; /* Dark pink/magenta */
+  --card-color: #ffccd5; /* Light pink */
+  --text-color: #ffe4e6; /* Almost white pink */
+  --accent-color: #ff8fab; /* Vibrant cherry blossom pink */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+}
