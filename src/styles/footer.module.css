@@ -1,10 +1,16 @@
 .footer {
-    background: #2d1b24;
-    color: #ffccd5;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+  background: #2d1b24;
+  color: #ffccd5;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0; /* Make sure it starts from the left */
+  width: 100%;
   
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+
+  font-size: 12px;
+}
