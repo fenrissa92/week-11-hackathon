@@ -1,19 +1,30 @@
 .section {
-    background: var(--card-color);
-    color: var(--background-color);
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .section:hover {
-    background: var(--accent-color);
-  }
-  
-  .content {
-    margin-top: 10px;
-    display: block;
-  }
-  
+  background: var(--card-color);
+  color: var(--background-color);
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-align: left;
+}
+
+.section:hover {
+  background: var(--accent-color);
+}
+
+/* ✅ Code Box Styles */
+pre {
+  background: #2d1b24;
+  color: #ffccd5;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  white-space: pre-wrap;  /* Ensures code wraps properly */
+  font-size: 14px;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  display: block;
+}
