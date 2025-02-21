@@ -1,58 +1,79 @@
-/* src/styles/author.module.css */
 .container {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 20px auto;
     max-width: 800px;
     padding: 20px;
-  }
-  
-  h2 {
+    text-align: center; /* Centering the content */
+    color: #555; /* Set a darker text color for readability */
+}
+
+h2 {
     font-size: 1.8rem;
-    color: #333;
+    color: #333; /* Darker shade for headings */
     margin-bottom: 20px;
-  }
-  
-  p {
+}
+
+p {
     font-size: 1rem;
-    color: #555;
+    color: #555; /* Same dark color for body text */
     margin-bottom: 15px;
-  }
-  
-  .images {
+}
+
+.images {
     display: flex;
+    justify-content: center; /* Center images horizontally */
     gap: 10px;
     margin-bottom: 20px;
-  }
-  
-  .image {
+}
+
+.image {
     width: 100px;
     height: 100px;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #ccc; /* Adding a subtle border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Added filter transition for color change */
     cursor: pointer;
-  }
-  
-  .image:hover {
+    position: relative; /* Ensure that the expanded image is positioned correctly */
+}
+
+/* Hover effect on regular images (slightly pinkish tint) */
+.image:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .expanded {
-    transform: scale(2);
-    z-index: 10;
-  }
-  
-  @media (max-width: 768px) {
+    filter: brightness(1.1) saturate(1.2) sepia(0.2) hue-rotate(-10deg); /* Subtle pinkish tint */
+}
+
+/* Expanded image takes up full screen, but using object-fit: contain */
+.expanded {
+    position: fixed; /* Make the image position fixed */
+    top: 0; /* Align to top of viewport */
+    left: 0; /* Align to left of viewport */
+    width: 100vw; /* Ensure the image takes up the full width of the screen */
+    height: 100vh; /* Ensure the image takes up the full height of the screen */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+    z-index: 9999; /* Put it on top of other content */
+    cursor: pointer; /* Make it clickable to close */
+    border: 4px solid #ff66b2; /* Pink border for expanded image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slight shadow for emphasis */
+}
+
+/* Hover effect for expanded image (to match .section:hover) */
+.expanded:hover {
+    background: rgba(255, 102, 178, 0.1); /* Light pink background on hover */
+    box-shadow: 0 6px 20px rgba(255, 102, 178, 0.4); /* Pink shadow on hover */
+}
+
+/* For mobile screens, adjust image sizes */
+@media (max-width: 768px) {
     .container {
-      padding: 15px;
-      margin: 10px;
+        padding: 15px;
+        margin: 10px;
     }
-  
+
     .image {
-      width: 80px;
-      height: 80px;
+        width: 80px;
+        height: 80px;
     }
-  }
-  
+}

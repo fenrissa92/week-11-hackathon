@@ -10,7 +10,9 @@
   
   display: flex;
   justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  align-items: center; /* Center content vertically */;
+}
 
+.footer p {
   font-size: 12px;
 }

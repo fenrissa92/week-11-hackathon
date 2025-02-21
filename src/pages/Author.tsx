@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "../styles/author.module.css";
 
 const Author = () => {
-  const [expandedImage, setExpandedImage] = useState(null);
+  const [expandedImage, setExpandedImage] = useState<string | null>(null);
 
-  const handleImageClick = (image) => {
-    setExpandedImage(expandedImage === image ? null : image);
+  const handleImageClick = (image: string) => {
+    setExpandedImage(expandedImage === image ? null : image); // Toggle between expanded and normal state
   };
 
   return (
@@ -16,13 +16,13 @@ const Author = () => {
 
       <div className={styles.images}>
         <img
-          src="/0E2C0F4F-430D-4DF1-98B5-C6C046129F70.jpg"  // Updated path
+          src="/0E2C0F4F-430D-4DF1-98B5-C6C046129F70.jpg"
           alt="Shetland Sheepdog 1"
           className={`${styles.image} ${expandedImage === 'image1' ? styles.expanded : ''}`}
           onClick={() => handleImageClick('image1')}
         />
         <img
-          src="/8B315AA3-FF21-4BD1-89E9-26E8D3F7C0F6.JPG"  // Updated path
+          src="/8B315AA3-FF21-4BD1-89E9-26E8D3F7C0F6.JPG"
           alt="Shetland Sheepdog 2"
           className={`${styles.image} ${expandedImage === 'image2' ? styles.expanded : ''}`}
           onClick={() => handleImageClick('image2')}
