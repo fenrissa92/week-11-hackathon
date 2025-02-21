@@ -21,6 +21,7 @@ pre {
   border-radius: 8px;
   overflow-x: auto;
   white-space: pre-wrap;  /* Ensures code wraps properly */
+  word-wrap: break-word;
   font-size: 14px;
 }
 
